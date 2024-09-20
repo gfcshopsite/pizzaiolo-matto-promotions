@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promozioni Giornaliere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .promotions {
+            margin: 20px 0;
+        }
+
+        .promotion {
+            background-color: #ff9000;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/1134533272441983086/1286661858811449384/369704766_270201485876001_7976269705594574960_n.jpg?ex=66eeb8bc&is=66ed673c&hm=922c4a79828581c42901409dd6ad5761c38dd0def437d041f37bc6bdbaa10eb2&" alt="Promozione">
+        <h1>Promozioni Giornaliere</h1>
+        <div id="promotions" class="promotions">
+            <!-- Le promozioni verranno caricate qui -->
+        </div>
+    </div>
+    <footer>
+        IL Pizzaiolo Matto 2024 - Tutti i diritti riservati
+    </footer>
+    <script>
+        const promotions = [
+            "Sconto del 20% su tutti i panuozzi!",
+            "Compra una pizza, prendi un dessert gratis!",
+            "Due per uno su tutte le bevande!",
+            "10% di sconto su ordini online superiori a 30€!"
+        ];
+
+        function displayPromotions() {
+            const promotionsContainer = document.getElementById('promotions');
+            promotionsContainer.innerHTML = ''; // Pulisci il contenuto esistente
+
+            promotions.forEach(promo => {
+                const promoDiv = document.createElement('div');
+                promoDiv.className = 'promotion';
+                promoDiv.textContent = promo;
+                promotionsContainer.appendChild(promoDiv);
+            });
+        }
+
+        // Carica le promozioni all'apertura della pagina
+        document.addEventListener('DOMContentLoaded', displayPromotions);
+    </script>
+</body>
+</html>
